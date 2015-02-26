@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fa8a11"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelCategory"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="cancel" >
+        </Button>
+
+        <Button
+            android:id="@+id/backCategory"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="back" >
+        </Button>
+
+        <TextView
+            android:id="@+id/categoryViewName"
+            style="@style/nameHeader"
+            android:layout_centerHorizontal="true"
+            android:text="New Category" />
+
+        <Button
+            android:id="@+id/addNewCategory"
+            style="@style/buttonHeader"
+            android:layout_alignParentRight="true"
+            android:text="save" >
+        </Button>
+
+        <Button
+            android:id="@+id/deleteCategory"
+            style="@style/buttonHeader"
+            android:layout_alignParentRight="true"
+            android:text="delete" >
+        </Button>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/newCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="text" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                style="@style/textNormal"
+                android:layout_alignParentLeft="true"
+                android:text="Type" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/incomeCategory"
+                    android:layout_width="65dp"
+                    android:layout_height="25dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_categoey_income_no" />
+
+                <ImageButton
+                    android:id="@+id/expenseCategory"
+                    android:layout_width="65dp"
+                    android:layout_height="25dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_categoey_expense" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textNormal"
+                android:text="Sub-Type-Of" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/selectCategorySubtype"
+                    style="@style/buttonToChoose"
+                    android:text="None" />
+
+                <TextView
+                    style="@style/textToChoose"
+                    android:text=" >" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            style="@style/textNormal"
+            android:text="Icon" />
+
+        <ImageView
+            android:id="@+id/iconCategory"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/pictureView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:numColumns="9" >
+    </GridView>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fa8a11"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/backToBefore"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="back" >
+        </Button>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:text="Account" 
+            style="@style/nameHeader"/>
+
+        <Button
+            android:id="@+id/newAccount"
+            android:layout_alignParentRight="true"
+            android:text="New\nAccount" 
+            style="@style/buttonHeader">
+        </Button>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/viewAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="45sp"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/dayGridCell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gridday"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/numDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/incomeDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="3dp"
+            android:textColor="#66ff33"
+            android:textSize="10sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/expenseDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="3dp"
+            android:textColor="#bd0000"
+            android:textSize="10sp" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

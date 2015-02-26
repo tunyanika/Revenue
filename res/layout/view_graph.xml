@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fa8a11"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/backGraph"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="back" >
+        </Button>
+
+        <TextView
+            style="@style/nameHeader"
+            android:layout_centerHorizontal="true"
+            android:text="Graph" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/chartAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/nameHeader"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:textColor="#f57f00"
+        android:text="account"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/chartType"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_graph_expense" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textNormal"
+                    android:text="From : " />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/grarpDateFrom"
+                        style="@style/buttonToChoose" />
+
+                    <TextView
+                        style="@style/textToChoose"
+                        android:text=" >" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textNormal"
+                    android:text="To : " />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/grarpDateTo"
+                        style="@style/buttonToChoose" />
+
+                    <TextView
+                        style="@style/textToChoose"
+                        android:text=" >" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fa8a11"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelChooseCategory"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="back" >
+        </Button>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:text="Category"
+            style="@style/nameHeader"/>
+
+        <Button
+            android:id="@+id/newCategory"
+            android:layout_alignParentRight="true"
+            android:text="New \nCategory"
+            style="@style/buttonHeader">
+        </Button>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/viewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp" />
+
+</LinearLayout>

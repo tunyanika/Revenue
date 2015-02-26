@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/oneDayMain"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/oneDayTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#fa8a11"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/prevDay"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true" >
+        </Button>
+
+        <Button
+            android:id="@+id/currentDay"
+            style="@style/nameHeader"
+            android:background="@null"
+            android:layout_centerHorizontal="true" >
+        </Button>
+
+        <Button
+            android:id="@+id/nextDay"
+            style="@style/buttonHeader"
+            android:layout_alignParentRight="true" >
+        </Button>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/oneDayCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/viewProgram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/oneDayButtom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/viewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:maxHeight="50dp"
+            android:maxWidth="133dp"
+            android:textColor="#FFFFFF" 
+            style="@style/buttonHeader">
+        </Button>
+
+        <ImageButton
+            android:id="@+id/newProgram"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_new_program" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_alignParentRight="true"
+            style="@style/textNormal"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+</RelativeLayout>

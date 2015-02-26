@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fa8a11"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelProgram"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="cancel" >
+        </Button>
+
+        <Button
+            android:id="@+id/backProgram"
+            style="@style/buttonHeader"
+            android:layout_alignParentLeft="true"
+            android:text="back" >
+        </Button>
+
+        <TextView
+            android:id="@+id/programNameView"
+            style="@style/nameHeader"
+            android:layout_centerHorizontal="true"
+            android:text="New Program" />
+
+        <Button
+            android:id="@+id/addNewProgram"
+            style="@style/buttonHeader"
+            android:layout_alignParentRight="true"
+            android:text="save" >
+        </Button>
+
+        <Button
+            android:id="@+id/deleteProgram"
+            style="@style/buttonHeader"
+            android:layout_alignParentRight="true"
+            android:text="delete" >
+        </Button>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <EditText
+                android:id="@+id/newProgramName"
+                style="@style/textEdit"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/incomeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/btn_income_noselect" />
+
+                    <ImageButton
+                        android:id="@+id/expenseButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/btn_expense_select" />
+
+                    <ImageButton
+                        android:id="@+id/transferButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/btn_trans_noselect" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/moneyThatUse"
+                    style="@style/textEdit"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="end"
+                    android:hint="0.00"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selectTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textNormal"
+                        android:text="From Account" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/accountChooseFrom"
+                            style="@style/buttonToChoose"
+                            android:text="Not Select" />
+
+                        <TextView
+                            style="@style/textToChoose"
+                            android:text=" >" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textNormal"
+                        android:text="To Account" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/accountChooseTo"
+                            style="@style/buttonToChoose"
+                            android:text="Not Select" />
+
+                        <TextView
+                            style="@style/textToChoose"
+                            android:text=" >" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textNormal"
+                        android:text="Category" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/categoryChoose"
+                            style="@style/buttonToChoose"
+                            android:text="other" />
+
+                        <TextView
+                            style="@style/textToChoose"
+                            android:text=" >" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textNormal"
+                        android:text="Account" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/accountChoose"
+                            style="@style/buttonToChoose"
+                            android:text="account" />
+
+                        <TextView
+                            style="@style/textToChoose"
+                            android:text=" >" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textNormal"
+                    android:text="Date" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/newProgramDate"
+                        style="@style/buttonToChoose"
+                        android:text="date" />
+
+                    <TextView
+                        style="@style/textToChoose"
+                        android:text=" >" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/textNormal"
+                    android:text="Note" />
+
+                <EditText
+                    android:id="@+id/programNote"
+                    style="@style/textEdit"
+                    android:layout_height="match_parent"
+                    android:gravity="start" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
